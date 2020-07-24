@@ -26,7 +26,7 @@
 
 ## Wireframe
 
-![alt text](https://github.com/dennisfrymire/SEIR_CAP/blob/master/public/images/Main_and_New.png?raw=true)
+<!-- ![alt text](https://github.com/dennisfrymire/SEIR_CAP/blob/master/public/images/Main_and_New.png?raw=true) -->
 
 
 
