@@ -26,9 +26,9 @@
 
 ## Wireframe
 
-[[https://github.com/dennisfrymire/SEIR_CAP/blob/master/public/images/Index_and_Show.png|alt=imageandshow)]]
+[https://github.com/dennisfrymire/SEIR_CAP/blob/master/public/images/Index_and_Show.png|alt=imageandshow)]
 
-[[https://github.com/dennisfrymire/SEIR_CAP/blob/master/public/images/Main_and_New.png|alt=mainandnew)]]
+[https://github.com/dennisfrymire/SEIR_CAP/blob/master/public/images/Main_and_New.png|alt=mainandnew)]
 
 
 
