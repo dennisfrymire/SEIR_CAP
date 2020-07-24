@@ -26,7 +26,7 @@
 
 ## Wireframe
 
-! [Main and New pages] (https://github.com/dennisfrymire/SEIR_CAP/blob/master/Quotes%20-%20Main%20%26%20New.png?raw=true)
+
 
 
 
