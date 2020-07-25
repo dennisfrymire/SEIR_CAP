@@ -1,0 +1,23 @@
+{
+  "name": "seir_cap",
+  "version": "1.0.0",
+  "description": "Quote app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dennisfrymire/SEIR_CAP.git"
+  },
+  "author": "Dennis Frymire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dennisfrymire/SEIR_CAP/issues"
+  },
+  "homepage": "https://github.com/dennisfrymire/SEIR_CAP#readme",
+  "dependencies": {
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.25"
+  }
+}
