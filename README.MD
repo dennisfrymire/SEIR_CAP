@@ -25,7 +25,7 @@
 - 3rd party API
 - GraphQl (stretch)
 
-## Wireframe
+## Wireframes
 
 ![main and new pages](https://github.com/dennisfrymire/SEIR_CAP/blob/master/public/images/Main_and_New.png?raw=true)
 
@@ -59,8 +59,6 @@ Day 7 - 9 | Deploy app to work out bugs | Incomplete
 
 # Time
 
-## MVP
-
 Component | Priority | Estimated Time | Actual Time
 --------- | -------- | -------------- | -----------
 Home Page | H | 1.5 hr |
@@ -71,6 +69,13 @@ Edit Page | H | 2 hr |
 Basic Styling | H 3 hr |
 
 ## Post-MVP
+
+Day | Deliverable | Status
+--- | ----------- | ------
+Day 10 | GraphQl in place of RESTApi | Incomplete
+Day 11 - 13 | More sophisticated UI and Design | Incomplete
+Day 14 | Final fixes, Probably Cry a Lot | Incomplete
+
 
 Component | Priority | Estimated Time | Actual Time
 --------- | -------- | -------------- | -----------
