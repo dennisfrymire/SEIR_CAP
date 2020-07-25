@@ -1,7 +1,7 @@
 {
   "name": "seir_cap",
   "version": "1.0.0",
-  "description": "Quote app",
+  "description": "Quotes app",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
