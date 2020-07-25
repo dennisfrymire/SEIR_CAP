@@ -23,6 +23,7 @@
 - MongoDB
 - NodeJS
 - 3rd party API
+- GraphQl (stretch)
 
 ## Wireframe
 
@@ -39,7 +40,7 @@
 ## Stretch
 
 - More complex UI
-- User authentification 
+- User authentication 
 - GraphQl to access API in place of REST 
 
 # Project Schedule
@@ -53,8 +54,8 @@ Day 1 | Wireframes/Timeline | Complete
 Day 2 | Backend - MongoDB & Routes Created | Incomplete
 Day 2 | Backend - Research and establish 3rd party API connection | Incomplete
 Day 3 - 6 | Front End - Learn React Native, and Build App as I Go | Incomplete
-Day 7 | Deploy app to work out bugs | Incomplete
-Day 8 - 9 | Test, Work Out Bugs | Incomplete
+Day 7 - 9 | Deploy app to work out bugs | Incomplete
+
 
 # Time
 
@@ -62,7 +63,7 @@ Day 8 - 9 | Test, Work Out Bugs | Incomplete
 
 Component | Priority | Estimated Time | Actual Time
 --------- | -------- | -------------- | -----------
-Landing Page | H | 1 hr |
+Home Page | H | 1.5 hr |
 Index Page | H | 2 hr |
 New Page | H | 2 hr |
 Show Page | H | 2 hr |
@@ -75,8 +76,12 @@ Component | Priority | Estimated Time | Actual Time
 --------- | -------- | -------------- | -----------
 GraphQl interface with API | M | 3 hr |
 More Sophisticated Styling & UI | M | 3-5 hr |
-User Authentification | M | 2 hr |
+User Authentication | M | 2 hr |
 Ability for user to share quotes on social | L | 2 hr
+
+# Trello Board
+
+https://trello.com/b/SAImXUwU/quotes
 
 
 
