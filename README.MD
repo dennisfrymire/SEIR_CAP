@@ -51,7 +51,7 @@ Day | Deliverable | Status
 --- | ----------- | ------
 Day 1 | Project Description | Complete
 Day 1 | Wireframes/Timeline | Complete
-Day 2 | Backend - MongoDB & Routes Created | Incomplete
+Day 2 | Backend - MongoDB & Routes Created | Complete
 Day 2 | Backend - Research and establish 3rd party API connection | Incomplete
 Day 3 - 6 | Front End - Learn React Native, and Build App as I Go | Incomplete
 Day 7 - 9 | Deploy app to work out bugs | Incomplete
@@ -66,7 +66,7 @@ Index Page | H | 2 hr |
 New Page | H | 2 hr |
 Show Page | H | 2 hr |
 Edit Page | H | 2 hr |
-Basic Styling | H 3 hr |
+Basic Styling | H | 3 hr |
 
 ## Post-MVP
 
