@@ -1,4 +1,4 @@
-# Daily Quote
+# Quote App
 
 ## User Stories
 
