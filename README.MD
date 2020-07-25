@@ -42,13 +42,44 @@
 - User authentification 
 - GraphQl to access API in place of REST 
 
+# Project Schedule
+
+## MVP
+
 Day | Deliverable | Status
 --- | ----------- | ------
-Day 1 (starting July 24) | Project Description | Complete
+Day 1 | Project Description | Complete
 Day 1 | Wireframes/Timeline | Complete
 Day 2 | Backend - MongoDB & Routes Created | Incomplete
 Day 2 | Backend - Research and establish 3rd party API connection | Incomplete
-Day 3 - 5 | Front End - Learn React Native, and Build App as I Go | Incomplete
+Day 3 - 6 | Front End - Learn React Native, and Build App as I Go | Incomplete
+Day 7 | Deploy app to work out bugs | Incomplete
+Day 8 - 9 | Test, Work Out Bugs | Incomplete
+
+# Time
+
+## MVP
+
+Component | Priority | Estimated Time | Actual Time
+--------- | -------- | -------------- | -----------
+Landing Page | H | 1 hr |
+Index Page | H | 2 hr |
+New Page | H | 2 hr |
+Show Page | H | 2 hr |
+Edit Page | H | 2 hr |
+Basic Styling | H 3 hr |
+
+## Post-MVP
+
+Component | Priority | Estimated Time | Actual Time
+--------- | -------- | -------------- | -----------
+GraphQl interface with API | M | 3 hr |
+More Sophisticated Styling & UI | M | 3-5 hr |
+User Authentification | M | 2 hr |
+Ability for user to share quotes on social | L | 2 hr
+
+
+
 
 
 
