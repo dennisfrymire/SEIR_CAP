@@ -23,7 +23,7 @@ mongoose.connect(mongoURI, { useNewUrlParser: true}, () => {
 mongoose.connection.on('error', err => console.log(err.message));
 mongoose.connection.on('disconnected', () => console.log('mongo disconnected'));
 
-const cocktailController = require('./controllers/quotes.js');
+const quotesController = require('./controllers/quotes.js');
 
 app.use('/quotes', quotesController);
 

@@ -41,6 +41,11 @@ router.delete('/:id', (req, res) => {
 //   console.log('added provided quote data')
 // })
 
+// Quotes.deleteMany({}, (err, data) => {
+//   if (err) console.log(err.message)
+//   console.log('dropped database')
+// })
+
 Quotes.countDocuments({}, (err, data) => {
     if (err) console.log(err.message)
     console.log(`There are ${data} quotes in this database`)

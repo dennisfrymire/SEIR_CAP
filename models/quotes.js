@@ -4,9 +4,8 @@ const quoteSchema = new mongoose.Schema({
     quote: { type: String, required: true },
     author: { type: String, required: true },
     tags: { type: [String], index: true }
-}, {
-    timestamps: { currentTime: () => Math.floor(Date.now() / 1000)}
-});
+}, { timestamps: true });
+
 
 const Quotes = mongoose.model("Quotes", quoteSchema)
 
