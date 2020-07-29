@@ -12,6 +12,7 @@ import {
   StyleSheet,
   ScrollView,
   View,
+  Button,
   Text,
   StatusBar,
 } from 'react-native';
@@ -24,8 +25,33 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
-  return (
+class App extends React.Component {
+  state = {
+    quotes: [],
+    baseURL: "http://quotes.rest/",
+    apikey: "api_key=uHPg8TAWchNSTx6G0YigpQeF",
+    query: "quote/random.json?",
+    // ingredient: '',
+    searchURL: "",
+    // community: false,
+    searchedQuote: false,
+    randomQuote: {}
+}
+
+componentDidMount() {
+    this.setState({
+        // ingredient: 'scotch',
+        // query: 'random.php',
+        searchURL: this.state.baseURL + this.state.query + this.state.apikey
+    }, () => {
+        fetch(this.state.searchURL)
+        .then(response => response.json())
+        .then(data => this.setState({quotes: data}))
+    })
+}
+
+render () {
+return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
@@ -39,36 +65,41 @@ const App: () => React$Node = () => {
             </View>
           )}
           <View style={styles.body}>
-            <View style={styles.sectionContainer}>
+          <View>
+            <Text>See?</Text>
+          </View>
+            {/* <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
                 <Text style={styles.highlight}>Hello!</Text> can we see a change here?
               </Text>
-            </View>
-            <View style={styles.sectionContainer}>
+            </View> */}
+            {/* <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>See Your Changes</Text>
               <Text style={styles.sectionDescription}>
                 <ReloadInstructions />
               </Text>
-            </View>
-            <View style={styles.sectionContainer}>
+            </View> */}
+            {/* <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Debug</Text>
               <Text style={styles.sectionDescription}>
                 <DebugInstructions />
               </Text>
-            </View>
-            <View style={styles.sectionContainer}>
+            </View> */}
+            {/* <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Learn More</Text>
               <Text style={styles.sectionDescription}>
                 Read the docs to discover what to do next:
               </Text>
-            </View>
-            <LearnMoreLinks />
+            </View> */}
+            {/* <LearnMoreLinks /> */}
           </View>
         </ScrollView>
+        
       </SafeAreaView>
     </>
   );
+}
 };
 
 const styles = StyleSheet.create({
