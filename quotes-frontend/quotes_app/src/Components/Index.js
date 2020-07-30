@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import CarouselPage from "./Carousel";
+import NavBarItem from "./NavBar";
 
 class Index extends React.Component {
   render() {
   return (
     <div className="App">
-      <h2>Index Headline</h2>
+      <NavBarItem />
+      <CarouselPage/>
+
     </div>
   );
 }

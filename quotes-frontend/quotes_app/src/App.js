@@ -12,7 +12,6 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-      <h1>Just a test headline</h1>
       <Index/>
       <Show />
       <Edit />
