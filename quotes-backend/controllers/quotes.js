@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+
+
 // model
 const Quotes = require('../models/quotes.js');
 const Quotes_Seed = require('../models/quotes_seed.js');
