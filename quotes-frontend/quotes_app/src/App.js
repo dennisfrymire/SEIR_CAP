@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { BrowserRouter, 
+         Switch, 
+         Route, 
+         Link } from "react-router-dom";
 
 import Index from "./Components/Index";
 import Show from "./Components/Show";
@@ -12,12 +16,10 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-      <Index/>
+      <Link to ="/quotes"><Index/></Link>
       <Show />
       <Edit />
       <New />
-
-      
     </div>
   );
 }
