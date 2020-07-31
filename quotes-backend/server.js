@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const methodOverride = require('method-override');
 
+// require('dotenv').config;
 
 
 // environment variables
@@ -30,10 +31,11 @@ mongoose.connect(mongoURI, { useNewUrlParser: true}, () => {
 mongoose.connection.on('error', err => console.log(err.message));
 mongoose.connection.on('disconnected', () => console.log('mongo disconnected'));
 
-const quotesController = require('./controllers/quotes.js');
-
+const quotesController = require('./models/quotes.js');
+const usersController = require('./models/users.js');
 app.use('/quotes', quotesController);
-app.use(cors());
+app.use('/users', usersController);
+
 
 
 app.listen(PORT, () => {
