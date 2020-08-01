@@ -1,8 +1,5 @@
-const router = require('express').Router();
 const express = require('express');
 const router = express.Router();
-
-
 
 // model
 const Quotes = require('../models/quotes.js');
@@ -13,12 +10,6 @@ router.get('/', (req, res) => {
         res.json(foundQuotes)
     })
 })
-
-// router.get('/communitySearch', (req, res) => {
-//     Cocktails.find({}, (err, foundCommunityCocktails) => {
-//         res.json(foundCommunityCocktails);
-//     })
-// })
 
 router.get('/:id', (req, res) => {
     Quotes.findById(req.params.id, (err, foundQuote) => {
@@ -42,11 +33,6 @@ router.delete('/:id', (req, res) => {
 // Quotes.create(Quotes_Seed, (err, data) => {
 //   if (err) console.log(err.message)
 //   console.log('added provided quote data')
-// })
-
-// Quotes.deleteMany({}, (err, data) => {
-//   if (err) console.log(err.message)
-//   console.log('dropped database')
 // })
 
 Quotes.countDocuments({}, (err, data) => {
