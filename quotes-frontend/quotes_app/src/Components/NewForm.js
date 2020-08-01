@@ -8,18 +8,18 @@ class NewForm extends Component {
   constructor(props) {
     super(props);
 
-    // this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeQuote = this.onChangeQuote.bind(this);
     this.onChangeAuthor = this.onChangeAuthor.bind(this);
     this.onChangeTags = this.onChangeTags.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      // username: '',
+      username: '',
       quote: '',
       author: '',
       tags: array,
-      // users: []
+      users: []
     }
   }
 
@@ -67,7 +67,7 @@ onSubmit(e) {
   e.preventDefault();
 
   const quotePackage = {
-    // username: this.state.username,
+    username: this.state.username,
     quote: this.state.quote,
     author: this.state.author,
     tags: this.state.tags
@@ -201,23 +201,6 @@ window.location = '/';
       <div>
         <h3>Create New Quote</h3>
         <form onSubmit={this.onSubmit}>
-          {/* <div className="form-group"> 
-            <label>Username: </label>
-            <select ref="userInput"
-                required
-                className="form-control"
-                value={this.state.username}
-                onChange={this.onChangeUsername}>
-                {
-                  this.state.users.map(function(user) {
-                    return <option 
-                      key={user}
-                      value={user}>{user}
-                      </option>;
-                  })
-                }
-            </select>
-          </div> */}
           <div className="form-group"> 
             <label>Quote </label>
             <input type="textarea"

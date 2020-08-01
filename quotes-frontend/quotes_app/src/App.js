@@ -20,10 +20,10 @@ class App extends React.Component {
     <Router>
       <div className="container">
       <Route path="/" exact component={QuotesList} />
-      <Route path="/" exact component={ShowQuote} />
+      {/* <Route path="/" exact component={ShowQuote} /> */}
       <New/>
       <NewUser/>
-      <Route path="/edit/:id" exact component={EditQuote} />
+      <Route path="/update/:id" exact component={EditQuote} />
       <Route path="/Components/New" exact component={CreateQuote} />
       <Route path="/user" exact component={CreateUser} />
       <Route path="./Components/About" exact component={About} />
