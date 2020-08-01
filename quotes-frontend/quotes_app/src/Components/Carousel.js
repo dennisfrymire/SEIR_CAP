@@ -10,8 +10,8 @@ import {
 import { CarouselImage } from '../Styles/layout';
 
 import image1 from "../images/anton-darius-ebHCU8n7G38-unsplash.jpg"
-import image2 from "../images/anton-darius-ebHCU8n7G38-unsplash.jpg"
-import image3 from "../images/anton-darius-ebHCU8n7G38-unsplash.jpg"
+import image2 from "../images/kenrick-mills-1h2Pg97SXfA-unsplash.jpg"
+import image3 from "../images/sam-ueGaQiHV86o-unsplash.jpg"
 
 const items = [
   {

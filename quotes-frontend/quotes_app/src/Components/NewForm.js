@@ -23,27 +23,27 @@ class NewForm extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   axios.get('http://localhost:3000/users/')
-  //     .then(response => {
-  //       if (response.data.length > 0) {
-  //         this.setState({
-  //           users: response.data.map(user => user.username),
-  //           username: response.data[0].username
-  //         })
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     })
+  componentDidMount() {
+    axios.get('http://localhost:3000/users/')
+      .then(response => {
+        if (response.data.length > 0) {
+          this.setState({
+            users: response.data.map(user => user.username),
+            username: response.data[0].username
+          })
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
 
-  // }
+  }
 
-// onChangeUsername(e) {
-//   this.setState({
-//     username: e.target.value
-//   })
-// };
+onChangeUsername(e) {
+  this.setState({
+    username: e.target.value
+  })
+};
 
 onChangeQuote(e) {
   this.setState({
@@ -220,12 +220,13 @@ window.location = '/';
           </div> */}
           <div className="form-group"> 
             <label>Quote </label>
-            <input  type="text"
+            <input type="textarea"
                 required
                 className="form-control"
                 value={this.state.quote}
                 onChange={this.onChangeQuote}
                 />
+            
           </div>
           <div className="form-group"> 
             <label>Author</label>

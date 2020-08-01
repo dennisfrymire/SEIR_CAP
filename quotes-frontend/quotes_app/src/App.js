@@ -8,6 +8,7 @@ import EditQuote from "./Components/Edit";
 import CreateQuote from "./Components/New";
 import CreateUser from "./Components/CreateUser";
 import About from "./Components/About";
+import NewUser from "./Components/NewUser";
 
 import './App.css';
 import New from './Components/New';
@@ -21,6 +22,7 @@ class App extends React.Component {
       <Route path="/" exact component={QuotesList} />
       <Route path="/" exact component={ShowQuote} />
       <New/>
+      <NewUser/>
       <Route path="/edit/:id" exact component={EditQuote} />
       <Route path="/Components/New" exact component={CreateQuote} />
       <Route path="/user" exact component={CreateUser} />
