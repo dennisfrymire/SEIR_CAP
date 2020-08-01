@@ -1,12 +1,14 @@
 const mongoose = require('mongoose');
 
-const quoteSchema = new mongoose.Schema({
+const Schema = mongoose.Schema;
+
+const quoteSchema = new Schema({
     quote: { type: String, required: true },
     author: { type: String, required: true },
-    tags: { type: [String], index: true }
+    tags: { type: [Array], index: true }
 }, { timestamps: true });
 
 
-const Quotes = mongoose.model("Quotes", quoteSchema)
+const Quote = mongoose.model("Quote", quoteSchema)
 
-module.exports = Quotes;
+module.exports = Quote;

@@ -1,8 +1,6 @@
 
-
-// export default Show;
-
-import React from 'react';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button, Row, Col

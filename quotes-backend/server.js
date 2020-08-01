@@ -1,6 +1,7 @@
 // dependencies
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const methodOverride = require('method-override');
 
 // environment variables
@@ -13,6 +14,7 @@ app.use(express.urlencoded({ extended: false }))// extended: false - does not al
 app.use(express.json()); //use .json(), not .urlencoded()
 app.use(express.static('public')) // we need to tell express to use the public directory for static files... this way our app will find index.html as the route of the application! We can then attach React to that file!
 app.use(methodOverride('_method'));
+app.use(cors());
 
 // connect to mongo
 mongoose.connect(mongoURI, { useNewUrlParser: true}, () => {
@@ -24,8 +26,10 @@ mongoose.connection.on('error', err => console.log(err.message));
 mongoose.connection.on('disconnected', () => console.log('mongo disconnected'));
 
 const quotesController = require('./controllers/quotes.js');
+const usersController = require('./controllers/users.js');
 
 app.use('/quotes', quotesController);
+app.use('/users', usersController);
 
 
 app.listen(PORT, () => {
