@@ -14,7 +14,7 @@ const Quote = props => (
   <Card>
   <CardBody>
     <CardText>{props.quote.quote}</CardText>
-    <CardText>{props.quote.author}</CardText>
+    <CardText className= "text-right">{props.quote.author}</CardText>
     <Link to={"/update/"+props.quote._id}>edit</Link> | <a href="#" onClick={() => { props.deleteQuote(props.quote._id) }}>delete</a>
   </CardBody>
   </Card>
@@ -75,7 +75,7 @@ quoteList() {
       <Col sm='center'>
       <Card>
       
-        <CardBody className= "text-center">
+        <CardBody className= "text-left">
           <CardText>{this.quoteList()}</CardText>
         </CardBody>
       </Card>

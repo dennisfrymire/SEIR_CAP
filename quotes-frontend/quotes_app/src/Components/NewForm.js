@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { array } from 'prop-types';
 
@@ -198,7 +199,7 @@ window.location = '/';
 
     render() {
       return (
-      <div>
+      <div className="text-left">
         <h3>Create New Quote</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group"> 

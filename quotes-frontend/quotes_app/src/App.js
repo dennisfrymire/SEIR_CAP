@@ -26,7 +26,7 @@ class App extends React.Component {
       <Route path="/update/:id" exact component={EditQuote} />
       <Route path="/Components/New" exact component={CreateQuote} />
       <Route path="/user" exact component={CreateUser} />
-      <Route path="./Components/About" exact component={About} />
+      <About />
       </div>
     </Router>
     
