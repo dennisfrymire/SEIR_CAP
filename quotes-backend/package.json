@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "node index.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"nodemon\" \"npm start\""
+    "dev": "concurrently \"nodemon\" \"npm start\"",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
