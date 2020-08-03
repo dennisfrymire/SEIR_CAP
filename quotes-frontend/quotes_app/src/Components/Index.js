@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button, Row, Col
+  Card, CardText, CardBody, Button, Row, Col
 } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import CarouselPage from "./Carousel";
@@ -18,6 +18,7 @@ const Quote = props => (
     <Link to={"/update/"+props.quote._id}>edit</Link> | <a href="#" onClick={() => { props.deleteQuote(props.quote._id) }}>delete</a>
   </CardBody>
   </Card>
+  
   
   
   
@@ -66,6 +67,7 @@ quoteList() {
     <div className="App">
       <NavBarItem />
       <CarouselPage/>
+      
       <Row>
       <Col sm='4'>
     
@@ -77,6 +79,7 @@ quoteList() {
       </Card>
       </Col>
       </Row>
+      
       
 
     </div>
