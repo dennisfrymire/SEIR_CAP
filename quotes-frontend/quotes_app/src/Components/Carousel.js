@@ -18,17 +18,17 @@ const items = [
     
     src: image1,
     altText: 'Slide 1',
-    caption: 'Slide 1'
+    
   },
   {
     src: image2,
     altText: 'Slide 2',
-    caption: 'Slide 2'
+    
   },
   {
     src: image3,
     altText: 'Slide 3',
-    caption: 'Slide 3'
+    
   }
 ];
 

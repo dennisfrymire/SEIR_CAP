@@ -6,7 +6,7 @@ const methodOverride = require('method-override');
 
 // environment variables
 const app = express();
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost/quotes-app';
+const atlasURI = process.env.ATLAS_URI || 'mongodb://localhost/quotes-app';
 const PORT = process.env.PORT || 3000;
 
 // middleware
@@ -17,8 +17,8 @@ app.use(methodOverride('_method'));
 app.use(cors());
 
 // connect to mongo
-mongoose.connect(mongoURI, { useNewUrlParser: true}, () => {
-    console.log('mongodb connection made ', mongoURI);
+mongoose.connect(atlasURI, { useNewUrlParser: true}, () => {
+    console.log('mongodb ATLAS connection made ', atlasURI);
 })
 
 // db messaging

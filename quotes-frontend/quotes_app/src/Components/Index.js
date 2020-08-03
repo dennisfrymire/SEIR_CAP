@@ -19,6 +19,8 @@ const Quote = props => (
   </CardBody>
   </Card>
   
+
+  
   
   
   
@@ -69,11 +71,11 @@ quoteList() {
       <CarouselPage/>
       
       <Row>
-      <Col sm='4'>
-    
-      <Card className='m-3'>
-        
-        <CardBody className="text-center">
+      
+      <Col sm='center'>
+      <Card>
+      
+        <CardBody className= "text-center">
           <CardText>{this.quoteList()}</CardText>
         </CardBody>
       </Card>

@@ -9,3 +9,11 @@ img {
   margin: auto;
 }
 `;
+
+export const CarouselPage = styled.div`
+
+{
+  bottom-margin: 10;
+}
+
+`;
