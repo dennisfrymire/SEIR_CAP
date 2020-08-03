@@ -1,8 +1,12 @@
 // dependencies
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
+const mongoose = require('mongoose');
 const methodOverride = require('method-override');
+
+
+// env connection
+require('dotenv').config();
 
 // environment variables
 const app = express();
@@ -18,7 +22,13 @@ app.use(cors());
 
 // connect to mongo
 mongoose.connect(atlasURI, { useNewUrlParser: true}, () => {
-    console.log('mongodb ATLAS connection made ', atlasURI);
+    console.log('internal connection made ', atlasURI);
+})
+
+const connection = mongoose.connection;
+connection.once('open', () => {
+    console.log("Mongo ATLAS connect made");
+
 })
 
 // db messaging
