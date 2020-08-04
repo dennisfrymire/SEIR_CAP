@@ -4,6 +4,8 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const path = require('path');
+const parser = require('body-parser')
+const passport = require('./config/passport')();
 
 
 // env connection
@@ -20,6 +22,8 @@ app.use(express.json()); //use .json(), not .urlencoded()
 app.use(express.static('public')) // we need to tell express to use the public directory for static files... this way our app will find index.html as the route of the application! We can then attach React to that file!
 app.use(methodOverride('_method'));
 app.use(cors());
+app.use(passport.initialize());
+app.use(parser.json())
 
 // connect to mongo
 mongoose.connect(atlasURI, { useNewUrlParser: true}, () => {
