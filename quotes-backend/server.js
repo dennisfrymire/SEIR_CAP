@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
+const path = require('path');
 
 
 // env connection
@@ -38,8 +39,14 @@ mongoose.connection.on('disconnected', () => console.log('mongo disconnected'));
 const quotesController = require('./controllers/quotes.js');
 const usersController = require('./controllers/users.js');
 
+app.use(express.static(`${__dirname}/build`) )
+
 app.use('/quotes', quotesController);
 app.use('/users', usersController);
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(`${__dirname}/build/index.html`))
+})
 
 
 app.listen(PORT, () => {
