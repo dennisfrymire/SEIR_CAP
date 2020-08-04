@@ -39,8 +39,18 @@ constructor(props) {
   this.state = {quotes: []};
 }
 
+// componentDidMount() {
+//   axios.get('http://localhost:3000/quotes/')
+//   .then(response => {
+//     this.setState({ quotes: response.data })
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   })
+// }
+
 componentDidMount() {
-  axios.get('http://localhost:3000/quotes/')
+  axios.get('/quotes')
   .then(response => {
     this.setState({ quotes: response.data })
   })
@@ -49,9 +59,13 @@ componentDidMount() {
   })
 }
 
-deleteQuote(id) {
-  axios.delete('http://localhost:3000/quotes/'+id)
-    .then(response => { console.log(response.data)});
+// deleteQuote(id) {
+//   axios.delete('http://localhost:3000/quotes/'+id)
+//     .then(response => { console.log(response.data)});
+
+    deleteQuote(id) {
+      axios.delete('/quotes/'+id)
+        .then(response => { console.log(response.data)});
 
   this.setState({
     quotes: this.state.quotes.filter(el => el._id !== id)
