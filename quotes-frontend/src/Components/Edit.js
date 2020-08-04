@@ -8,14 +8,13 @@ class Edit extends Component {
   constructor(props) {
     super(props);
 
-    this.onChangeUsername = this.onChangeUsername.bind(this);
+   
     this.onChangeQuote = this.onChangeQuote.bind(this);
     this.onChangeAuthor = this.onChangeAuthor.bind(this);
     this.onChangeTags = this.onChangeTags.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      username: '',
       quote: '',
       author: '',
       tags: array,
@@ -27,7 +26,6 @@ class Edit extends Component {
     axios.get('http://localhost:3000/quotes/'+this.props.match.params.id)
       .then(response => {
           this.setState({
-            username: response.data.username,
             quote: response.data.quote,
             author: response.data.author,
             tags: response.data.tags
@@ -52,11 +50,11 @@ class Edit extends Component {
 
   }
 
-onChangeUsername(e) {
-  this.setState({
-    username: e.target.value
-  })
-};
+// onChangeUsername(e) {
+//   this.setState({
+//     username: e.target.value
+//   })
+// };
 
 onChangeQuote(e) {
   this.setState({
@@ -80,7 +78,7 @@ onSubmit(e) {
   e.preventDefault();
 
   const quote = {
-    username: this.state.username,
+    // username: this.state.username,
     quote: this.state.quote,
     author: this.state.author,
     tags: this.state.tags
@@ -214,7 +212,7 @@ window.location = '/';
       <div>
         <h3>Edit Quote</h3>
         <form onSubmit={this.onSubmit}>
-        <div className="form-group"> 
+        {/* <div className="form-group"> 
           <label>Username: </label>
           <select ref="userInput"
               required
@@ -230,7 +228,7 @@ window.location = '/';
                 })
               }
           </select>
-        </div>
+        </div> */}
           <div className="form-group"> 
             <label>Quote </label>
             <input type="textarea"

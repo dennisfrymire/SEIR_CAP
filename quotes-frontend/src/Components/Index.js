@@ -3,6 +3,7 @@ import {
   Card, CardText, CardBody, Button, Row, Col
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import CarouselPage from "./Carousel";
@@ -39,18 +40,8 @@ constructor(props) {
   this.state = {quotes: []};
 }
 
-// componentDidMount() {
-//   axios.get('http://localhost:3000/quotes/')
-//   .then(response => {
-//     this.setState({ quotes: response.data })
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   })
-// }
-
 componentDidMount() {
-  axios.get('/quotes')
+  axios.get('http://localhost:3000/quotes/')
   .then(response => {
     this.setState({ quotes: response.data })
   })
@@ -59,9 +50,28 @@ componentDidMount() {
   })
 }
 
+// componentDidMount() {
+//   axios.get('/quotes')
+//   .then(response => {
+//     this.setState({ quotes: response.data })
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   })
+// }
+
+deleteQuote(id) {
+  axios.delete('http://localhost:3000/quotes/'+id)
+    .then(response => { console.log(response.data)});
+
 // deleteQuote(id) {
-//   axios.delete('http://localhost:3000/quotes/'+id)
+//   axios.delete('/quotes/'+id)
 //     .then(response => { console.log(response.data)});
+
+this.setState({
+quotes: this.state.quotes.filter(el => el._id !== id)
+})
+}
 
     deleteQuote(id) {
       axios.delete('/quotes/'+id)
@@ -79,7 +89,9 @@ quoteList() {
 }
 
   render() {
+    console.log(this.quoteList)
   return (
+    
     <div className="App">
       <NavBarItem />
       <CarouselPage/>
