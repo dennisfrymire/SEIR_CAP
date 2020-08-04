@@ -11,7 +11,7 @@
     "server": "node server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"nodemon\" \"npm start\"",
-    "start": "node quotes-backend/server.js",
+    "start": "node server.js",
     "heroku-postbuild": "cd client && npm install -- only=dev && npm install && npm run build"
   },
   "repository": {
