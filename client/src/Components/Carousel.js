@@ -4,14 +4,15 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption
+  CarouselCaption,
+  Container
 } from 'reactstrap';
 
 import { CarouselImage } from '../Styles/layout';
 
-import image1 from "../images/anton-darius-ebHCU8n7G38-unsplash.jpg"
-import image2 from "../images/kenrick-mills-1h2Pg97SXfA-unsplash.jpg"
-import image3 from "../images/sam-ueGaQiHV86o-unsplash.jpg"
+import image1 from "../images/1.png"
+import image2 from "../images/2.png"
+import image3 from "../images/3.png"
 
 const items = [
   {
@@ -55,6 +56,7 @@ const CarouselPage = (props) => {
 
   const slides = items.map((item) => {
     return (
+      
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
@@ -62,20 +64,19 @@ const CarouselPage = (props) => {
       >
       <CarouselImage>
         <img src={item.src} 
-        width={900} 
-        height={500} 
-        margin={"auto"}
-        
-        
+        className="d-block w-100"
         alt={item.altText} />
+        
       </CarouselImage>
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       
       </CarouselItem>
+      
     );
   });
 
   return (
+    <Container className="themed-container" fluid={true}>
     <Carousel
       activeIndex={activeIndex}
       next={next}
@@ -86,6 +87,7 @@ const CarouselPage = (props) => {
       <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
       <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
     </Carousel>
+    </Container>
   );
 }
 

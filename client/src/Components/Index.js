@@ -67,8 +67,7 @@ quoteList() {
   render() {
   return (
     <div className="App">
-      <NavBarItem />
-      <CarouselPage/>
+      
       
       <Row>
       
