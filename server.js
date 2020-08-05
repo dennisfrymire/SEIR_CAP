@@ -23,7 +23,7 @@ app.use(express.static('public')) // we need to tell express to use the public d
 app.use(methodOverride('_method'));
 app.use(cors());
 app.use(passport.initialize());
-app.use(parser.json())
+app.use(parser.json());
 
 // connect to mongo
 mongoose.connect(atlasURI, { useNewUrlParser: true}, () => {
@@ -43,13 +43,18 @@ mongoose.connection.on('disconnected', () => console.log('mongo disconnected'));
 const quotesController = require('./controllers/quotes.js');
 const usersController = require('./controllers/users.js');
 
-app.use(express.static(`${__dirname}/build`) )
+// app.use(express.static(`${__dirname}/build`) )
+app.use(express.static('public'));
 
 app.use('/quotes', quotesController);
 app.use('/users', usersController);
 
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(`${__dirname}/build/index.html`))
+// })
+
 app.get("*", (req, res) => {
-    res.sendFile(path.join(`${__dirname}/build/index.html`))
+    res.sendFile(path.resolve(__dirname, public, 'index.html'));
 })
 
 
