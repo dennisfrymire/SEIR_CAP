@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import QuotesList from "./Components/Index";
 import ShowQuote from "./Components/Show";
-import EditQuote from "./Components/Edit2";
+import EditQuote from "./Components/Edit";
 import CreateQuote from "./Components/New";
 import CreateUser from "./Components/CreateUser";
 import About from "./Components/About";
