@@ -20,13 +20,14 @@ class Edit extends Component {
       // username: '',
       quote: '',
       author: '',
-      tags: array,
+      tags: [''],
       users: []
     }
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/quotes/'+this.props.match.params.id)
+    let quoteId = this.props.match.params.id
+    axios.get(`http://localhost:3000/quotes/${quoteId}`)
       .then(response => {
           this.setState({
             // username: response.data.username,
@@ -88,14 +89,11 @@ onSubmit(e) {
     tags: this.state.tags
   }
 
-
-
-axios.post('http://localhost:3000/quotes/update/' + this.props.match.params.id, quote)
+let quoteId = this.props.match.params.id
+axios.post(`http://localhost:3000/quotes/update/${quoteId}`, quote)
       .then(res => console.log(res.data));
 
 window.location = '/';
-
-
 }
         
 // handleChange = (event) => {
@@ -267,6 +265,7 @@ window.location = '/';
             <input type="submit" value="Edit Quote" className="btn btn-primary" />
           </div>
         </form>
+        
       </div>
       )
     }

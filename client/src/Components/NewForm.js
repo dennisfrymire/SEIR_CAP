@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { array } from 'prop-types';
@@ -233,7 +234,8 @@ window.location = '/';
           
   
           <div className="form-group">
-            <input type="submit" value="Create Quote" className="btn btn-primary" />
+            <input type="submit" value="Add Quote" className="btn btn-primary" />
+            <br/>
           </div>
         </form>
       </div>

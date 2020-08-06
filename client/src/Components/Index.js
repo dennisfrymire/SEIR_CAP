@@ -8,14 +8,15 @@ import axios from 'axios';
 import CarouselPage from "./Carousel";
 import NavBarItem from "./NavBar";
 
-const Quote = props => (
+const Quote = (props) => (
   
   
   <Card>
   <CardBody>
     <CardText>{props.quote.quote}</CardText>
-    <CardText className= "text-right">{props.quote.author}</CardText>
+    <CardText className= "text-right">- {props.quote.author}</CardText>
     <Link to={"/update/"+props.quote._id}>edit</Link> | <a href="#" onClick={() => { props.deleteQuote(props.quote._id) }}>delete</a>
+    <CardText className="text-right">{props.quote.tags}</CardText>
   </CardBody>
   </Card>
   
@@ -67,8 +68,6 @@ quoteList() {
   render() {
   return (
     <div className="App">
-      
-      
       <Row>
       
       <Col sm='center'>

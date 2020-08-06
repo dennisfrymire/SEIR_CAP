@@ -15,6 +15,7 @@ import NewUser from "./Components/NewUser";
 import SignUpForm from "./Components/SignUpForm";
 import LogInForm from "./Components/LogInForm";
 import LogOutForm from "./Components/LogOutForm";
+import Search from "./Components/Search";
 
 import './App.css';
 import New from './Components/New';
@@ -29,6 +30,7 @@ class App extends React.Component {
     
       <NavBar />
       <CarouselPage/> 
+      <Search />
       
       
       {/* <Route path="/" exact component={ShowQuote} /> */}

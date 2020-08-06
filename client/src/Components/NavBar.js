@@ -10,15 +10,15 @@ const NavBarItem = (props) => {
   return (
     <div>
       <Navbar color="faded" light>
-        <NavbarBrand href="/" className="mr-auto">Quote Me</NavbarBrand>
+        <NavbarBrand href="/" className="mr-auto">quotes</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="/add">Add New Quote</NavLink>
+              <NavLink href="/add">add new quote</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="./Components/About">About</NavLink>
+              <NavLink href="./Components/About">about</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
