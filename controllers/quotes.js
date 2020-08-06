@@ -14,13 +14,13 @@ router.route('/').get((req, res) => {
   });
   
   router.route('/add').post((req, res) => {
-    const username = req.body.username;
+    // const username = req.body.username;
     const quote = req.body.quote;
     const author = req.body.author;
     const tags = req.body.tags;
   
     const newQuote = new Quotes({
-      username,
+      // username,
       quote,
       author,
       tags,

@@ -15,7 +15,7 @@ const NavBarItem = (props) => {
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink href="/signup">Create User Account</NavLink>
+              <NavLink href="/add">Add New Quote</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="./Components/About">About</NavLink>

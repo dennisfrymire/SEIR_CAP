@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { array } from 'prop-types';
 
+
+
 class Edit extends Component {
 
   constructor(props) {
@@ -260,7 +262,7 @@ window.location = '/';
                 />
           </div>
           
-  
+       
           <div className="form-group">
             <input type="submit" value="Edit Quote" className="btn btn-primary" />
           </div>
