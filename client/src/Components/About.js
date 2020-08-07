@@ -11,7 +11,7 @@ class About extends Component {
             <div className="container main-text">
                 <p><span className="headline bold">quote</span> is a CRUD app using the MERN stack, and was executed as my capstone project from General Assembly's Software Engineering Immersive.</p>
 
-                <p>You can check out the code on <a href={github}>Github</a>.</p>
+                <p>You can check out the code on <Link to={github}>Github</Link>.</p>
             </div>
         )
     }

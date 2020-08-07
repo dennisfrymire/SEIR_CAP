@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavBar from "./Components/NavBar";
@@ -7,60 +7,23 @@ import CarouselPage from "./Components/Carousel";
 import Index from "./Components/Index";
 import EditQuote from "./Components/Edit";
 import CreateQuote from "./Components/New";
-import CreateUser from "./Components/CreateUser";
 import About from "./Components/About";
-import NewUser from "./Components/NewUser";
-import SignUpForm from "./Components/SignUpForm";
-import LogInForm from "./Components/LogInForm";
-import LogOutForm from "./Components/LogOutForm";
-import Search from "./Components/Search";
 import Footer from "./Components/Footer";
 
+export default class App extends Component {
 
-
-
-class App extends React.Component {
-
-
-  render() {
+render() {
   return (
     <div className="container">
-    
-      
-      
-      {/* <Search /> */}
-      
-      
-      {/* <Route path="/" exact component={ShowQuote} /> */}
-      {/* <Route path="/signup" exact component={SignUpForm}/> */}
-      {/* <New/>
-      <NewUser/> */}
       <Router>
-      
-      <NavBar path="/" component={NavBar}/>
-      <CarouselPage path ="/" component={CarouselPage}/> 
-
-      
+        <NavBar path="/" component={NavBar}/>
+        <CarouselPage path ="/" component={CarouselPage}/> 
         <Route exact path="/" component={Index}/>
-
         <Route path="/update/:id" exact component={EditQuote} />
-      
         <Route exact path="/add" component={CreateQuote}/>
-
-
-      
-        {/* <Route path="/user" exact component={CreateUser} /> */}
-      
         <Route exact path="/Components/About" component={About}/>
-
       </Router>
-      <Footer/>
-      </div>
-    
-    
-  );
-}
-}
-
-
-export default App;
+    <Footer/>
+  </div>
+  )};
+};

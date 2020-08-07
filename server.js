@@ -13,8 +13,7 @@ require('dotenv').config();
 
 // environment variables
 const app = express();
-const mongoURI = process.env.MONGODB_URI
-// const atlasURI = process.env.ATLAS_URI || 'mongodb://localhost:27017/quotes-app';
+const atlasURI = process.env.ATLAS_URI || 'mongodb://localhost:27017/quotes-app';
 const PORT = process.env.PORT || 3000;
 
 // middleware
@@ -27,8 +26,8 @@ app.use(passport.initialize());
 app.use(parser.json());
 
 // connect to mongo
-mongoose.connect(mongoURI, { useNewUrlParser: true}, () => {
-    console.log('internal connection made ', mongoURI);
+mongoose.connect(atlasURI, { useNewUrlParser: true}, () => {
+    console.log('internal connection made ', atlasURI);
 })
 
 const connection = mongoose.connection;
@@ -49,10 +48,6 @@ app.use(express.static('public'));
 
 app.use('/quotes', quotesController);
 app.use('/users', usersController);
-
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(`${__dirname}/build/index.html`))
-// })
 
 app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));

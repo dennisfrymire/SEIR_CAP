@@ -80,7 +80,7 @@ const CarouselPage = (props) => {
   });
 
   return (
-    <Container className="themed-container" className="carousel" fluid={true}>
+    <Container className="themed-container carousel" fluid={true}>
     <Carousel
       activeIndex={activeIndex}
       next={next}

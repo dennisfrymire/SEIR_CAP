@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import { array } from 'prop-types';
 
-class New extends Component {
+export default class New extends Component {
 
   constructor(props) {
     super(props);
@@ -122,6 +122,4 @@ render() {
       </div>
       )
     }
-  }
-
-export default New;
+  };

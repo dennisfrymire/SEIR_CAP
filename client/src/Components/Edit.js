@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import { array } from 'prop-types';
 
 import './Style.css';
 
@@ -116,7 +114,7 @@ render() {
           
        
           <div className="form-group">
-            <input type="submit" value="Edit Quote" className="btn btn-outline-secondary" />
+            <input type="submit" value="Save" className="btn btn-outline-secondary" />
           </div>
         </form>
         

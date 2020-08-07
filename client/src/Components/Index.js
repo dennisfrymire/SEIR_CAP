@@ -12,7 +12,8 @@ const Quote = (props) => (
   <CardBody>
     <CardText className="quote index text-left">{props.quote.quote}</CardText>
     <CardText className= "text-right author">- {props.quote.author}</CardText>
-    <Link to={"/update/"+props.quote._id}>edit</Link> | <a href="#" onClick={() => { props.deleteQuote(props.quote._id) }}>delete</a>
+    <Link to={"/update/"+props.quote._id}>edit</Link> | <Link to="#" onClick={() => { props.deleteQuote(props.quote._id) }}>delete</Link>
+    {/* <input type="submit" value="Add Quote" className="btn btn-outline-secondary" /> */}
   </CardBody>
   </Card>
 )
