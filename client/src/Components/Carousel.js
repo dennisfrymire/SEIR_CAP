@@ -16,6 +16,9 @@ import './Style.css';
 import image1 from "../images/1.png"
 import image2 from "../images/2.png"
 import image3 from "../images/3.png"
+import image4 from "../images/4.png"
+import image5 from "../images/5.png"
+import image6 from "../images/6.png"
 
 const items = [
   {
@@ -32,7 +35,21 @@ const items = [
   {
     src: image3,
     altText: 'Slide 3',
+  },
+  {
     
+    src: image4,
+    altText: 'Slide 1',
+    
+  },
+  {
+    src: image5,
+    altText: 'Slide 2',
+    
+  },
+  {
+    src: image6,
+    altText: 'Slide 3',
   }
 ];
 

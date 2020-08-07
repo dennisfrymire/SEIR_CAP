@@ -29,7 +29,7 @@ const NavBar = (props) => {
               <NavLink href="/Components/About">about</NavLink>
             </NavItem>
           </Nav>
-          <NavbarBrand className="headline">be inspired</NavbarBrand>
+          <NavbarBrand className="headline">say something</NavbarBrand>
         </Collapse>
       </Navbar>
     </div>
