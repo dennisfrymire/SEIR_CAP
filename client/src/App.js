@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import axios from 'axios';
-import { Container, Row, Col } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavBar from "./Components/NavBar";
@@ -16,9 +14,9 @@ import SignUpForm from "./Components/SignUpForm";
 import LogInForm from "./Components/LogInForm";
 import LogOutForm from "./Components/LogOutForm";
 import Search from "./Components/Search";
+import Footer from "./Components/Footer";
 
-import './App.css';
-import New from './Components/New';
+// import './App.css';
 
 
 class App extends React.Component {
@@ -28,9 +26,9 @@ class App extends React.Component {
   return (
     <div className="container">
     
-      <NavBar />
-      <CarouselPage/> 
-      <Search />
+      
+      
+      {/* <Search /> */}
       
       
       {/* <Route path="/" exact component={ShowQuote} /> */}
@@ -38,18 +36,25 @@ class App extends React.Component {
       {/* <New/>
       <NewUser/> */}
       <Router>
+      
+      <NavBar path="/" component={NavBar}/>
+      <CarouselPage path ="/" component={CarouselPage}/> 
 
-        <Route path="/" exact component={Index}/>
+      
+        <Route exact path="/" component={Index}/>
 
         <Route path="/update/:id" exact component={EditQuote} />
       
         <Route exact path="/add" component={CreateQuote}/>
+
+
       
         {/* <Route path="/user" exact component={CreateUser} /> */}
       
         <Route exact path="/Components/About" component={About}/>
 
       </Router>
+      <Footer/>
       </div>
     
     

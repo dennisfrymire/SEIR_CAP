@@ -8,7 +8,10 @@ import {
   Container
 } from 'reactstrap';
 
-import { CarouselImage } from '../Styles/layout';
+import './Carousel.css';
+
+
+
 
 import image1 from "../images/1.png"
 import image2 from "../images/2.png"
@@ -32,6 +35,7 @@ const items = [
     
   }
 ];
+
 
 const CarouselPage = (props) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -62,12 +66,12 @@ const CarouselPage = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-      <CarouselImage>
+      <div>
         <img src={item.src} 
         className="d-block w-100"
         alt={item.altText} />
         
-      </CarouselImage>
+      </div>
         <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       
       </CarouselItem>
@@ -76,7 +80,7 @@ const CarouselPage = (props) => {
   });
 
   return (
-    <Container className="themed-container" fluid={true}>
+    <Container className="themed-container" className="carousel" fluid={true}>
     <Carousel
       activeIndex={activeIndex}
       next={next}

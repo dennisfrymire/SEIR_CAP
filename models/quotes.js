@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const quoteSchema = new Schema({
     quote: { type: String, required: true },
     author: { type: String, required: true },
-    tags: { type: [Array], index: true }
+    tags: { type: [Array] }
 }, { timestamps: true });
 
 

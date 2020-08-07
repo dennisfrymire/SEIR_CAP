@@ -4,7 +4,6 @@ import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap
 import { array } from 'prop-types';
 
 
-
 class Edit extends Component {
 
   constructor(props) {
@@ -40,26 +39,7 @@ class Edit extends Component {
       .catch((error) => {
         console.log(error);
       })
-
-      // axios.get('http://localhost:3000/users/')
-      // .then(response => {
-      //   if (response.data.length > 0) {
-      //     this.setState({
-      //       users: response.data.map(user => user.username),
-      //     })
-      //   }
-      // })
-      // .catch((error) => {
-      //   console.log(error);
-      // })
-
-  }
-
-// onChangeUsername(e) {
-//   this.setState({
-//     username: e.target.value
-//   })
-// };
+}
 
 onChangeQuote(e) {
   this.setState({
@@ -96,141 +76,13 @@ axios.post(`http://localhost:3000/quotes/update/${quoteId}`, quote)
 window.location = '/';
 }
         
-// handleChange = (event) => {
-// const updateInput = Object.assign( this.state.formInputs, { [event.target.id]: event.target.value })
-// this.setState(updateInput)
-// }
-      
-//       handleSubmit = (event) =>{
-//         event.preventDefault()
-//         fetch('http://localhost:3000/quotes', {
-//           body: JSON.stringify(this.state.formInputs),
-//           method: 'POST',
-//        headers: {
-//          'Accept': 'application/json, text/plain, */*',
-//          'Content-Type': 'application/json'
-//        }
-//       })
-//        .then(createdQuote => {
-//          return createdQuote.json()
-//        })
-      
-//        .then(jsonedQuote => {
-//          // reset the form
-//          this.setState({
-//            formInputs: {
-//              title: '',
-//              quote: '',
-//              author: '',
-//              tags: ['']
-//             },
-//            quotes: [jsonedQuote, ...this.state.quotes]
-//          })
-//        })
-//        .catch(error => console.log(error))
-//       }
-      
-//        componentDidMount() {
-//         this.getQuotes()
-//       }
-      
-//       getQuotes = () =>{
-//         fetch('http://localhost:3000/quotes')
-//           .then(response => response.json())
-//           .then(json => this.setState({quotes: json}))
-//           .catch(error => console.error(error))
-//       }
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state({
-    //         formInputs: {
-    //         quote: '',
-    //         author: '',
-    //         tags: ['']
-    //     };
-    
-    //     this.handleChange = this.handleChange.bind(this);
-    //     this.handleSubmit = this.handleSubmit.bind(this);
-    //   }
-    
-    //   handleChange(event) {
-    //     this.setState({value: event.target.value});
-    //   }
-    
-    //   handleSubmit(event) {
-    //     alert('A name was submitted: ' + this.state.value);
-    //     event.preventDefault();
-    //   }
-
-
-    // state = {
-    //     quote: '',
-    //     author: '',
-    //     tags: ['']
-    // }
-
-    // handleChange = (event) => {
-    //     // setState is a built-in method of the React library
-    //     this.setState({
-    //         [event.target.id]: event.target.value
-    //     })
-    // }
-
-    // handleSubmit = (event, newFormState) => {
-    //     event.preventDefault();
+render() {
+  return (
+    <div>
+      <h3>Edit Quote</h3>
+      <form onSubmit={this.onSubmit}>
         
-    //     console.log(newFormState)
-    //     fetch('/quotes', {
-    //         body: JSON.stringify(newFormState),
-    //         method: "POST",
-    //         headers: {
-    //             'Accept': 'application/json, text/plain, */*',
-    //             'Content-Type': 'application/json'
-    //         }
-    //     }).then(response => response.json())
-    //         .then(newQuote => {
-    //             console.log(newQuote)
-    //             this.setState({
-    //                 userQuotes: [...this.state.userQuotes, newQuote],
-                    
-
-    //             })
-    //         })
-    // }
-
-    // clearForm = () => {
-    //     this.setState({
-    //     quote: '',
-    //     author: '',
-    //     tags: ['']
-    //     })
-    // }
-
-    // {(ev) => this.props.handleSubmit(ev, this.state, this.clearForm())}
-
-    render() {
-      return (
-      <div>
-        <h3>Edit Quote</h3>
-        <form onSubmit={this.onSubmit}>
-        {/* <div className="form-group"> 
-          <label>Username: </label>
-          <select ref="userInput"
-              required
-              className="form-control"
-              value={this.state.username}
-              onChange={this.onChangeUsername}>
-              {
-                this.state.users.map(function(user) {
-                  return <option 
-                    key={user}
-                    value={user}>{user}
-                    </option>;
-                })
-              }
-          </select>
-        </div> */}
           <div className="form-group"> 
             <label>Quote </label>
             <input type="textarea"
@@ -270,40 +122,5 @@ window.location = '/';
       )
     }
   }
-// render () {
-//   return (
-//     <Form onSubmit={this.onSubmit}>
-//     <FormGroup row>
-//         <Label sm={2}>Quote</Label>
-//         <Col sm={10}>
-//           <Input type="textarea" id="newQuote" placeholder="To be or not to be..."  onChange={this.handleChange}  />
-//         </Col>
-//       </FormGroup>
-//       <FormGroup row>
-//         <Label for="author" sm={2}>Author</Label>
-//         <Col sm={10}>
-//           <Input type="text" name="author" id="newAuthor" onChange={this.handleChange} placeholder="Abraham Lincoln, Anonymous..." />
-//         </Col>
-//       </FormGroup>
-//       <FormGroup row>
-//         <Label for="tags" sm={2}>Tags</Label>
-//         <Col sm={10}>
-//           <Input type="text" name="tags" id="newTags" onChange={this.handleChange} placeholder="Motivation, Love, etc.">
-            
-//           </Input>
-//         </Col>
-//       </FormGroup>
-      
-      
-      
-//       <FormGroup check row>
-//         <Col sm={{ size: 10, offset: 2 }}>
-//           <Button>Submit</Button>
-//         </Col>
-//       </FormGroup>
-//     </Form>
-//   );
-// }
-// };
 
 export default Edit;

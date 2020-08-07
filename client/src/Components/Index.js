@@ -1,24 +1,25 @@
 import React, {Component} from 'react';
 import {
-  Card, CardText, CardBody, Button, Row, Col
+  Card, CardText, CardBody, Button, Container, Row, Col
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom';
+
 import axios from 'axios';
-import CarouselPage from "./Carousel";
-import NavBarItem from "./NavBar";
+
+import './Carousel.css';
+
 
 const Quote = (props) => (
   
-  
   <Card>
   <CardBody>
-    <CardText>{props.quote.quote}</CardText>
-    <CardText className= "text-right">- {props.quote.author}</CardText>
+    <CardText className="quote">{props.quote.quote}</CardText>
+    <CardText className= "text-right author">- {props.quote.author}</CardText>
     <Link to={"/update/"+props.quote._id}>edit</Link> | <a href="#" onClick={() => { props.deleteQuote(props.quote._id) }}>delete</a>
-    <CardText className="text-right">{props.quote.tags}</CardText>
   </CardBody>
   </Card>
+  
   
 
   
@@ -65,12 +66,17 @@ quoteList() {
   })
 }
 
+
+
+
+
+
   render() {
   return (
-    <div className="App">
+    <Container className="index">
       <Row>
       
-      <Col sm='center'>
+      <Col>
       <Card>
       
         <CardBody className= "text-left">
@@ -82,7 +88,7 @@ quoteList() {
       
       
 
-    </div>
+    </Container>
   );
 }
 }

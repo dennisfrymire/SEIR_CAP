@@ -1,0 +1,47 @@
+:root {
+    --main-bottom-margin: 2.5rem;
+    --main-font: "Montserrat", san-serif;
+    --secondary-font: "Roboto", sans-serif;
+    --main-background-color: lightgrey;
+    --main-bottom-padding: 1rem;
+
+}
+
+.container {
+    background: var(--main-background-color);
+    padding-bottom: var(--main-bottom-padding);
+    margin-bottom: var(--main-bottom-margin);
+}
+
+.headline {
+    font-family: var(--main-font);
+}
+
+.main-text {
+    font-family: var(--secondary-font);
+}
+
+.index {
+    margin-bottom: var(--main-bottom-margin);
+}
+
+.carousel {
+    margin-bottom: var(--main-bottom-margin);
+}
+
+.quote {
+    font-family: var(--main-font)
+}
+
+.author {
+    font-family: var(--secondary-font)
+}
+
+.create {
+    font-family: var(--main-font)
+}
+
+.footer {
+    display: flex;
+    padding-bottom: var(--main-bottom-padding)
+}
