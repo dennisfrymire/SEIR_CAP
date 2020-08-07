@@ -16,20 +16,18 @@
 
 ## Technologies
 
-- React Native
+- React / React Router
 - Express
 - JavaScript
 - JSX
-- MongoDB
+- MongoDB / MongoAtlas
 - NodeJS
-- 3rd party API
-- GraphQl (stretch)
 
 ## Wireframes
 
-![main and new pages](https://github.com/dennisfrymire/SEIR_CAP/blob/master/public/images/Main_and_New.png?raw=true)
+![main and new pages](https://github.com/dennisfrymire/SEIR_CAP/blob/master/client/assets/images/Main_and_New.png?raw=true)
 
-![index and show pages](https://github.com/dennisfrymire/SEIR_CAP/blob/master/public/images/Index_and_Show.png?raw=true)
+![index and show pages](https://github.com/dennisfrymire/SEIR_CAP/blob/master/client/assets/images/Index_and_Show.png?raw=true)
 
 ## MVP
 
