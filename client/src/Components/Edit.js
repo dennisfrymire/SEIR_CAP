@@ -79,7 +79,7 @@ window.location = '/';
 
 render() {
   return (
-    <div>
+    <div className="text-left headline">
       <h3>Edit Quote</h3>
       <form onSubmit={this.onSubmit}>
         
@@ -114,7 +114,7 @@ render() {
           
        
           <div className="form-group">
-            <input type="submit" value="Edit Quote" className="btn btn-primary" />
+            <input type="submit" value="Edit Quote" className="btn btn-outline-secondary" />
           </div>
         </form>
         

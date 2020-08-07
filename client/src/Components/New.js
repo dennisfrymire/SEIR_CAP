@@ -124,14 +124,4 @@ render() {
     }
   }
 
-
-//   render() {
-//   return (
-//     <div className="container">
-//       <NewForm />
-//     </div>
-//   );
-// }
-// }
-
 export default New;
