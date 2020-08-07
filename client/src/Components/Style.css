@@ -2,7 +2,7 @@
     --main-bottom-margin: 2.5rem;
     --main-font: "Montserrat", san-serif;
     --secondary-font: "Roboto", sans-serif;
-    --main-background-color: lightgrey;
+    --main-background-color: whitesmoke;
     --main-bottom-padding: 1rem;
 
 }
@@ -41,7 +41,16 @@
     font-family: var(--main-font)
 }
 
+.new {
+    margin-bottom: var(--main-bottom-margin)
+}
+
 .footer {
     display: flex;
-    padding-bottom: var(--main-bottom-padding)
+    justify-content: flex-end;
+    padding-bottom: .25rem;
+}
+
+.card {
+    margin-bottom: 2.5rem;
 }

@@ -8,7 +8,7 @@ import {
   Container
 } from 'reactstrap';
 
-import './Carousel.css';
+import './Style.css';
 
 
 

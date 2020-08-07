@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Style.css';
 
 let github = 'https://github.com/dennisfrymire/SEIR_CAP';
 

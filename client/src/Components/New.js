@@ -81,7 +81,7 @@ window.location = '/';
 }
 render() {
   return (
-      <div className="text-left headline">
+      <div className="text-left headline new">
         <h3>Add New Quote</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group main-text"> 

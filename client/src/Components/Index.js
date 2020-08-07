@@ -1,48 +1,34 @@
 import React, {Component} from 'react';
-import {
-  Card, CardText, CardBody, Button, Container, Row, Col
+import {Link} from 'react-router-dom';
+import axios from 'axios';
+import { Card, CardText, CardBody,Container, Row, Col
 } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Link} from 'react-router-dom';
-
-import axios from 'axios';
-
-import './Carousel.css';
-
+import './Style.css';
 
 const Quote = (props) => (
   
   <Card>
   <CardBody>
-    <CardText className="quote">{props.quote.quote}</CardText>
+    <CardText className="quote index text-left">{props.quote.quote}</CardText>
     <CardText className= "text-right author">- {props.quote.author}</CardText>
     <Link to={"/update/"+props.quote._id}>edit</Link> | <a href="#" onClick={() => { props.deleteQuote(props.quote._id) }}>delete</a>
   </CardBody>
   </Card>
-  
-  
-
-  
-  
-  
-  
-  
- 
-  
 )
 
-class Index extends Component {
+export default class Index extends Component {
 
 constructor(props) {
   super(props);
 
-  this.deleteQuote = this.deleteQuote.bind(this);
+this.deleteQuote = this.deleteQuote.bind(this);
 
   this.state = {quotes: []};
 }
 
 componentDidMount() {
-  axios.get('http://localhost:3000/quotes/')
+  axios.get('http://localhost:3000/quotes')
   .then(response => {
     this.setState({ quotes: response.data })
   })
@@ -66,31 +52,20 @@ quoteList() {
   })
 }
 
-
-
-
-
-
-  render() {
+render() {
   return (
-    <Container className="index">
+    <Container>
       <Row>
-      
-      <Col>
-      <Card>
-      
-        <CardBody className= "text-left">
-          <CardText>{this.quoteList()}</CardText>
-        </CardBody>
-      </Card>
-      </Col>
+        <Col>
+          <Card className="card">
+            <CardBody>
+            <CardText>{this.quoteList()}</CardText>
+            </CardBody>
+          </Card>
+        </Col>
       </Row>
-      
-      
-
     </Container>
-  );
-}
-}
+    )}
+  }
 
-export default Index;
+

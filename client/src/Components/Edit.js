@@ -3,6 +3,8 @@ import axios from 'axios';
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { array } from 'prop-types';
 
+import './Style.css';
+
 
 class Edit extends Component {
 
