@@ -1,4 +1,4 @@
-# Quote App
+# quote App
 
 ## User Stories
 
@@ -17,6 +17,7 @@
 ## Technologies
 
 - React / React Router
+- Reactstrap / Bootstrap
 - Express
 - JavaScript
 - JSX
@@ -29,62 +30,43 @@
 
 ![index and show pages](https://github.com/dennisfrymire/SEIR_CAP/blob/master/client/assets/images/Index_and_Show.png?raw=true)
 
-## MVP
+## Challenges
 
-- CRUD app with users able to create, read, update and destroy entries as noted in user stories
-- Hosted online
-- Front end through React Native, a technology not used in class
+- Mongo Atlas. It is connected to the Heroku app and works as long as I have my local server running, but not otherwise. This apparently seems to be a common issue. 
 
-## Stretch
+- Working with 3rd party API. I originally wanted to use GraphQL as a stretch goal. I spent 2-3 days working on that, but ended up falling back to a RestAPI, but wasn't able to successfully connect it and a search function with my app.
 
-- More complex UI
-- User authentication 
-- GraphQl to access API in place of REST 
+- Overall design is a little too simplistic.
 
-# Project Schedule
+- Overall, time management. I spent the first several days of the project attempting to learn new technologies to incorporate, and spent too much time in this phase. 
 
-## MVP
+## If I had to do it over
 
-Day | Deliverable | Status
---- | ----------- | ------
-Day 1 | Project Description | Complete
-Day 1 | Wireframes/Timeline | Complete
-Day 2 | Backend - MongoDB & Routes Created | Complete
-Day 2 | Backend - Research and establish 3rd party API connection | Incomplete
-Day 3 - 6 | Front End - Learn React Native, and Build App as I Go | Incomplete
-Day 7 - 9 | Deploy app to work out bugs | Incomplete
+- I would spend less time researching new technologies and dove into actually building the app sooner. 
 
+## What do I want to revisit
 
-# Time
+- User authentication - allow users to have accounts where they can save their own collection of favorite 
+- A search function 
+- Include optional imagery with submitted quotes
+- Overall design of the app
+- Create an accompanying mobile app
 
-Component | Priority | Estimated Time | Actual Time
---------- | -------- | -------------- | -----------
-Home Page | H | 1.5 hr |
-Index Page | H | 2 hr |
-New Page | H | 2 hr |
-Show Page | H | 2 hr |
-Edit Page | H | 2 hr |
-Basic Styling | H | 3 hr |
+## What went well
 
-## Post-MVP
+- Discovering React Router. I first struggled with picturing how I would render each component once I decided to abandon React Native and use the Create-React-App we used in class. Once I came across React Router, the basic layout of the front end fell into place. 
 
-Day | Deliverable | Status
---- | ----------- | ------
-Day 10 | GraphQl in place of RESTApi | Incomplete
-Day 11 - 13 | More sophisticated UI and Design | Incomplete
-Day 14 | Final fixes, Probably Cry a Lot | Incomplete
+- Using MongoDB. The Heroku/Atlas issues aside, I feel like I have a pretty decent grasp on Mongo. Setting up the backend routes and initial database was the easiest aspect of this project.
+
+- Feeling like I developed more of a "Programmer's Brain" with this project. I came into bootcamp knowing this was all going to be a challenge. I'm a novice. This isn't my wheelhouse or background. I get frustrated when I can't quickly figure out an answer. I get the thoughts of "Oh, God, what am I doing with my life?" A couple of nights ago, I spent about an hour debugging my Heroku deployment, and I feel like something clicked - I found myself actually enjoying working out the bugs.
+
+<hr>
+
+Website: https://quote-me-mae.herokuapp.com/
 
 
-Component | Priority | Estimated Time | Actual Time
---------- | -------- | -------------- | -----------
-GraphQl interface with API | M | 3 hr |
-More Sophisticated Styling & UI | M | 3-5 hr |
-User Authentication | M | 2 hr |
-Ability for user to share quotes on social | L | 2 hr
 
-# Trello Board
 
-https://trello.com/b/SAImXUwU/quotes
 
 
 
