@@ -7,15 +7,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Style.css';
 
 const Quote = (props) => (
+
   
+  <Col>
   <Card>
   <CardBody>
     <CardText className="quote index text-left">{props.quote.quote}</CardText>
     <CardText className= "text-right author">- {props.quote.author}</CardText>
     <Link to={"/update/"+props.quote._id}>edit</Link> | <Link to="#" onClick={() => { props.deleteQuote(props.quote._id) }}>delete</Link>
-    {/* <input type="submit" value="Add Quote" className="btn btn-outline-secondary" /> */}
   </CardBody>
   </Card>
+  </Col>
+  
+
+  
 )
 
 export default class Index extends Component {
@@ -55,8 +60,16 @@ quoteList() {
 
 render() {
   return (
+    
     <Container>
-      <Row>
+      <Row xs="2">
+        
+        {this.quoteList()}
+  
+      </Row>
+    </Container>
+    
+      /* <Row>
         <Col>
           <Card className="card">
             <CardBody>
@@ -64,8 +77,8 @@ render() {
             </CardBody>
           </Card>
         </Col>
-      </Row>
-    </Container>
+      </Row> */
+    
     )}
   }
 

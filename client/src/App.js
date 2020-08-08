@@ -22,8 +22,9 @@ render() {
         <Route path="/update/:id" exact component={EditQuote} />
         <Route exact path="/add" component={CreateQuote}/>
         <Route exact path="/Components/About" component={About}/>
+        <Footer path="/" component={Footer}/>
       </Router>
-    <Footer/>
+    
   </div>
   )};
 };
