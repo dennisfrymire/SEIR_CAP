@@ -13,7 +13,7 @@ require('dotenv').config();
 
 // environment variables
 const app = express();
-const atlasURI = process.env.ATLAS_URI || 'mongodb://localhost:27017/quotes-app';
+const atlasURI = process.env.ATLAS_URI || 'https://git.heroku.com/quote-me-mae.git';
 const PORT = process.env.PORT || 3000;
 
 // middleware

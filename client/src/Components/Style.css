@@ -2,7 +2,7 @@
     --main-bottom-margin: 2.5rem;
     --main-font: "Montserrat", san-serif;
     --secondary-font: "Roboto", sans-serif;
-    --main-background-color: whitesmoke;
+    --main-background-color: white;
     --main-bottom-padding: 1rem;
 
 }
@@ -53,6 +53,8 @@
 
 .card {
     margin-bottom: 2.5rem;
+    box-shadow: 5px 5px grey;
+    background-color: lightyellow;
 }
 
 
