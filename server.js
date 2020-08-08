@@ -50,7 +50,7 @@ app.use('/quotes', quotesController);
 app.use('/users', usersController);
 
 app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client', "build", 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 })
 
 
